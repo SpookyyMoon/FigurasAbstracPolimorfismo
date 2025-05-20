@@ -32,7 +32,7 @@ public class Circulo extends Figura {
 
     @Override
     public String toString() {
-        return  "Nombre" + nombre + "\n" +
+        return  "Nombre: " + nombre + "\n" +
                 "Radio: " + radio + "\n" +
                 "Area: " + calcularArea() + "\n" +
                 "Perímetro: " + calcularPerimetro() + "\n" +

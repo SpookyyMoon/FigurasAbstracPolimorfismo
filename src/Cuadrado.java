@@ -27,7 +27,7 @@ public class Cuadrado extends Figura {
 
     @Override
     public String toString() {
-        return  "Nombre" + nombre + "\n" +
+        return  "Nombre: " + nombre + "\n" +
                 "Lado: " + lado + "\n" + // Cambio a "lado", es más correcto
                 "Area: " + calcularArea() + "\n" +
                 "Perímetro: " + calcularPerimetro() + "\n" +

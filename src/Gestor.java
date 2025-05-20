@@ -41,6 +41,48 @@ public class Gestor {
         }
     }
 
+    public void mostrarFigurasTipo(int tipo) {
+        if (figuras.isEmpty()) {
+            System.out.println("No hay figuras creadas.");
+            return;
+        }
+
+        switch (tipo){
+            case 1:
+                for (int i = 0; i < figuras.size(); i++) {
+                    if ((figuras.get(i)).getClass() == Cuadrado.class){
+                        System.out.println("Figura #" + i + ":");
+                        System.out.println(figuras.get(i));
+                    }
+                }
+                break;
+            case 2:
+                for (int i = 0; i < figuras.size(); i++) {
+                    if ((figuras.get(i)).getClass() == Rectangulo.class){
+                        System.out.println("Figura #" + i + ":");
+                        System.out.println(figuras.get(i));
+                    }
+                }
+                break;
+            case 3:
+                for (int i = 0; i < figuras.size(); i++) {
+                    if ((figuras.get(i)).getClass() == Circulo.class){
+                        System.out.println("Figura #" + i + ":");
+                        System.out.println(figuras.get(i));
+                    }
+                }
+                break;
+            case 4:
+                for (int i = 0; i < figuras.size(); i++) {
+                    if ((figuras.get(i)).getClass() == Triangulo.class){
+                        System.out.println("Figura #" + i + ":");
+                        System.out.println(figuras.get(i));
+                    }
+                }
+                break;
+        }
+    }
+
     // Cambiado de métodos individuales para eliminar cualquier tipo de figura a uno para todos los tipos
     public void eliminarFigura(int indice) {
         if (indice >= 0 && indice < figuras.size()) {
@@ -105,7 +147,7 @@ public class Gestor {
     public float calcularAreaTotal() {
         float total = 0;
         for (Figura f : figuras) {
-            total += f.calcularPerimetro();
+            total += f.calcularArea();
         }
         return total;
     }

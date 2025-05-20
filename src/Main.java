@@ -49,7 +49,34 @@ public class Main {
                     gestor.mostrarFiguras();
                     break;
                 case 8:
-                    // COdigo de fiuguras por tipo
+                    int figuraTipo;
+                    do {
+                        System.out.println("\n== Figuras ==");
+                        System.out.println("1. Cuadrado");
+                        System.out.println("2. Rectángulo");
+                        System.out.println("3. Círculo");
+                        System.out.println("4. Triángulo");
+                        System.out.println("5. Volver");
+                        System.out.print("Selecciona el tipo de figura: ");
+                        figuraTipo= sc.nextInt();
+
+                        if (figuraTipo >= 1 && figuraTipo <= 4) {
+                            switch (figuraTipo) {
+                                case 1:
+                                    gestor.mostrarFigurasTipo(1);
+                                    break;
+                                case 2:
+                                    gestor.mostrarFigurasTipo(2);
+                                    break;
+                                case 3:
+                                    gestor.mostrarFigurasTipo(3);
+                                    break;
+                                case 4:
+                                    gestor.mostrarFigurasTipo(4);
+                                    break;
+                            }
+                        }
+                    } while (figuraTipo != 5);
                     break;
                 case 9:
                     System.out.println("\n== Mover Figura ==");
@@ -80,7 +107,7 @@ public class Main {
             System.out.println("3. Círculo");
             System.out.println("4. Triángulo");
             System.out.println("5. Volver");
-            System.out.print("Seleccione el tipo de figura: ");
+            System.out.print("Selecciona el tipo de figura: ");
             opcion = sc.nextInt();
 
             if (opcion >= 1 && opcion <= 4) {

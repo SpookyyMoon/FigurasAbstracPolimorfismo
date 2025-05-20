@@ -57,9 +57,7 @@ public class Triangulo extends Figura {
     @Override
     public String toString() {
         // Cambio de lado1/lado2 a base/altura
-        return  "Nombre" + nombre + "\n" +
-                "Base: " + base + "\n" +
-                "Altura: " + altura + "\n" +
+        return  "Nombre: " + nombre + "\n" +
                 "Base: " + base + "\n" +
                 "Altura: " + altura + "\n" +
                 "Area: " + calcularArea() + "\n" +
